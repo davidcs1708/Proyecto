@@ -27,7 +27,7 @@
     </head>
     <body>
         <%
-            s_fc_inicial=request.getParameter("fc_inicio");
+            s_fc_inicial=(String)session.getAttribute("fc_inicio");
             s_fc_final=request.getParameter("fc_final");
             s_idioma=request.getParameter("idioma");
             s_profesor=request.getParameter("profesor");

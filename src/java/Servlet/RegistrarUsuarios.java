@@ -5,7 +5,7 @@
  */
 package Servlet;
 
-import Package.Consultas;
+import Package.Consultas_usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -39,7 +39,7 @@ public class RegistrarUsuarios extends HttpServlet {
         String contraseña = request.getParameter("contrasena");
         String nombre = request.getParameter("nombre");
 
-        Consultas co = new Consultas();
+        Consultas_usuario co = new Consultas_usuario();
         if (co.registrar(nombre, contraseña, usuario)) {
             response.sendRedirect("index.jsp");
         } else {

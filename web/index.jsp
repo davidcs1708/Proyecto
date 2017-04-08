@@ -33,7 +33,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; </TD>
                 </TR>
                 <TR>
-                    <TD style="HEIGHT: 92px" align="center"><IMG alt="" src="Ingreso.jpg"></TD>
+                    <TD style="HEIGHT: 92px" align="center"><IMG alt="" src="Imagenes/Ingreso.jpg"></TD>
                 </TR>
                 
                 <TR>

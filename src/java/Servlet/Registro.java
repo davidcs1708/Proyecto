@@ -5,7 +5,7 @@
  */
 package Servlet;
 
-import Package.Consultas_usuario;
+import Package.Consultas_registros;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author David
  */
-@WebServlet(name = "InicioSesion", urlPatterns = {"/iniciar"})
-public class InicioSesion extends HttpServlet {
+@WebServlet(name = "Registro", urlPatterns = {"/Registro"})
+public class Registro extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,17 +35,18 @@ public class InicioSesion extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String usuario="",contraseña="";
+        String s_fc_inicial,s_fc_final,s_idioma,s_profesor,s_f_pago;
+        s_fc_inicial=request.getParameter("fc_inicio");
+        s_fc_final=request.getParameter("fc_final");
+        s_idioma=request.getParameter("idioma");
+        s_profesor=request.getParameter("profesor");
+        s_f_pago=request.getParameter("f_pago");
         
-        usuario = request.getParameter("usuario");
-        contraseña = request.getParameter("contrasena");
-        
-        Consultas_usuario co = new Consultas_usuario();
-        
-        if (co.autenticacion(usuario, contraseña)) {
+        Consultas_registros co = new Consultas_registros();
+        if (co.Registro(s_fc_inicial, s_fc_final, s_idioma, s_profesor, s_f_pago)) {
             response.sendRedirect("menu.jsp");
-        }else{
-            response.sendRedirect("index.jsp");
+        } else {
+            response.sendRedirect("Materias.jsp");
         }
     }
 

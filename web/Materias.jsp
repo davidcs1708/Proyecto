@@ -28,7 +28,7 @@
         </script> 
     </head>
     <body>
-        <form name="v_materia" action="Verificacion_Materias.jsp">
+        <form name="v_materia" action="Registro">
             <table align="center">
                 <thead>
                     <tr>

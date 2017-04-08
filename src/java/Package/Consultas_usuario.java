@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Consultas extends Conexion {
+public class Consultas_usuario extends Conexion {
 
     public boolean autenticacion(String usuario, String contraseña) {
         PreparedStatement pst = null;
@@ -72,7 +72,7 @@ public class Consultas extends Conexion {
     }
 
     public static void main(String[] args) {
-        Consultas co = new Consultas();
+        Consultas_usuario co = new Consultas_usuario();
         co.registrar("pepito castillo", "123", "pepitoo");
     }
 }
